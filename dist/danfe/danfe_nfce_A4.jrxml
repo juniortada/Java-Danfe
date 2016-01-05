@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2015-11-10T15:19:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="danfe_nfce_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="20" bottomMargin="10" uuid="5ce393bf-1e81-4d5c-8158-54fb1fa7db75">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="ZmlsaWFsIEFTICw2OCwyLGI4NDNiMGE4LTgzOTEtNDU1MC05YzZkLTEzMmZjZDkxYTE0OTs="/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="emit" class="java.util.List"/>
+	<parameter name="dest" class="java.util.List"/>
+	<parameter name="nota" class="java.util.List"/>
+	<parameter name="qrcode" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="quantidade" class="java.lang.String"/>
+	<field name="valor" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="0" width="430" height="10" uuid="f2fa37a1-ea20-4fe8-9b5e-92343c502be7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emit}.get(0)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="80" y="10" width="430" height="10" uuid="63d771d5-90df-430c-8186-7fa85a232014">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CNPJ: "+$P{emit}.get(1)+" / IE: "+$P{emit}.get(2)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="30" width="430" height="10" uuid="1798e7f0-2d47-45d9-b8b9-257e9b3f1720">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[---------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="70" width="430" height="10" uuid="596672c6-9286-4dfa-8679-744716b00ba8">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[----------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="40" width="430" height="10" uuid="6481e6a0-1f79-4a93-9d44-277124d6d6a5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[DANFE NFC-e - Documento Auxiliar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="50" width="430" height="10" uuid="173e4bc8-e653-46fc-8096-a1febf3934c0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[da Nota Fiscal Eletrônica para Consumidor Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="60" width="430" height="10" uuid="dbfecfbb-532d-4121-9b3e-73788cf75807">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[Não permite aproveitamento de créditos de ICMS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="80" width="60" height="10" uuid="d411c9db-cc96-4b42-83f5-a1c40db8cd8e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="80" width="150" height="10" uuid="64a95282-a6ba-4003-8e76-0e4b4cc45f5e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="80" width="60" height="10" uuid="be718ba8-9c1c-4e83-958f-5bbc125e190e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qtd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="80" width="80" height="10" uuid="946cde96-8db3-4285-8c71-4e6ef960090a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[V.Uni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="80" width="80" height="10" uuid="99e53f3d-8008-4fff-920b-faa6a5cecfb1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="20" width="150" height="10" uuid="95670028-1605-4058-98ee-c15af91b19d5">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emit}.get(3)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="20" width="50" height="10" uuid="17bc2fd2-f7ec-4f1d-9e3b-807504e01455"/>
+				<textElement>
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emit}.get(4)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="20" width="79" height="10" uuid="24a9363e-573b-454b-a6d8-c4bb952f3eee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emit}.get(5)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="360" y="20" width="89" height="10" uuid="24a93af2-fe6d-40c6-8723-f552a57b100d"/>
+				<textElement textAlignment="Right" markup="none">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{emit}.get(6)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="449" y="20" width="42" height="10" uuid="b689ce10-606f-48af-b81e-7c40dd2998fb"/>
+				<textElement>
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-"+$P{emit}.get(7)]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="80" y="-1" width="60" height="10" uuid="51acc61e-1228-46d8-9428-c2a907a15b30"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="0" width="150" height="10" uuid="ea716b93-d919-4d0c-9714-8c57450f63ab"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="60" height="10" uuid="9ae45b72-a4d9-425a-9a10-92b41afb9595"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="0" width="80" height="10" uuid="ac9d965d-5ccf-4ddb-99a4-5ab173040e2b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="80" height="10" uuid="ec7e5b7c-2300-40c2-8f7b-78af3f91afb0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="340" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="80" y="0" width="430" height="10" uuid="33bc6593-bc1b-4bf9-b0b4-5ce9a9ce0657">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[----------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="10" width="210" height="10" uuid="149b5c86-0678-4780-8760-b3e2f3ce992f"/>
+				<textElement>
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[QTD. TOTAL DE ITENS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="10" width="160" height="10" uuid="ca679f03-00b0-4747-aff8-25fadc4104fc"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nota}.get(8)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="20" width="160" height="10" uuid="30ccc944-118c-422d-ad49-34b2b294092e"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nota}.get(0)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="20" width="210" height="10" uuid="b3ee2b9e-cd57-4ea7-8660-77da13222418"/>
+				<textElement>
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[VALOR TOTAL R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="30" width="210" height="10" uuid="95033fa9-91ef-4ee1-a40f-6fe1bb99a290"/>
+				<textElement>
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[FORMA DE PAGAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="30" width="160" height="10" uuid="67551b2a-a198-4912-8216-8e93f8f466ae"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[Valor Pago]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="40" width="160" height="10" uuid="d0b66756-034d-4175-911e-755f6bf9204c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nota}.get(0)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="40" width="210" height="10" uuid="d1dad2b8-6daa-4a20-8a06-ea62f3ef44a5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nota}.get(7)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="50" width="430" height="10" uuid="4919a581-56e5-4d3a-ad4a-c7fbbc90e868"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[----------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="60" width="430" height="10" uuid="a362577d-1252-4dbd-a360-35c18f4259eb"/>
+				<textElement textAlignment="Left">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[Informação dos Tributos Totais Incidentes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="70" width="210" height="10" uuid="b8a258cd-fae3-4e86-bba9-f23f9b4c8442"/>
+				<textElement textAlignment="Left">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[(Lei Federal 12.741/2012)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="80" width="430" height="10" uuid="5f97f608-131e-45fc-859c-05196d42fcbe"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="100" width="430" height="10" uuid="65ac92cd-a379-479e-ae36-dd4ccdef5961">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[Consulte pela chave de acesso em:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="110" width="430" height="10" uuid="a49e47a5-3c96-46e8-9fc1-c3dced2b1679">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[http://www.fazenda.pr.gov.br/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="120" width="430" height="10" uuid="928fadcc-e06a-4d06-b68c-8d4742f7d164">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[CHAVE DE ACESSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="140" width="430" height="10" uuid="3c6128ed-f237-4510-8694-308fc1c0399b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="150" width="430" height="10" uuid="ddbeadbd-5acb-4343-b23f-dec657788d8d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[CONSUMIDOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="170" width="430" height="10" uuid="6e6fea35-844f-45a7-92d9-802a0df4e08a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<text><![CDATA[Consulte via leitor de QR Code]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="222" y="190" width="131" height="131" uuid="0b3b6d7b-1c25-4b7c-acdc-f38d14374fb4"/>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA[$P{qrcode}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<textField>
+				<reportElement x="80" y="90" width="430" height="10" uuid="ee169ed0-e35f-4619-833e-4cec8912d0d4"/>
+				<textElement>
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Número: "+$P{nota}.get(1)+" Série: "+$P{nota}.get(2)+" Emissão: "+$P{nota}.get(3)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="130" width="430" height="10" uuid="bee84d27-15f6-4dc0-b17e-f9289abb6d20">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nota}.get(4)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="330" width="430" height="10" uuid="31f78630-bdd3-4b73-93d9-acff3f002bbf">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Protocolo de Autorização: "+$P{nota}.get(5)+" "+$P{nota}.get(6)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="160" width="430" height="10" uuid="600b7e92-81d1-420a-9cd0-7256cca7e792"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{dest}.size()>0) ? $P{dest}.get(0):" CONSUMIDOR NÃO IDENTIFICADO"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="70" width="160" height="10" uuid="c26ada66-bf93-4b29-8b9e-7952a2153d7c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Mono" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nota}.get(9) + (($P{nota}.size()>10) ? "\n"+$P{nota}.get(10) : "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
